@@ -13,6 +13,10 @@ public class Box implements Parcelable {
     private PointF mOrigin;
     private PointF mCurrent;
 
+    private float mBoxAngle;
+    private PointF mCenterOfRotation;
+
+
     public Box(PointF origin) {
         mOrigin = origin;
         mCurrent = origin;
@@ -62,4 +66,20 @@ public class Box implements Parcelable {
             return new Box[size];
         }
     };
+
+    public float getBoxAngle() {
+        return mBoxAngle;
+    }
+
+    public void setBoxAngle(float boxAngle) {
+        mBoxAngle = boxAngle;
+    }
+
+    public PointF getCenterOfRotation() {
+        return mCenterOfRotation;
+    }
+
+    public void setCenterOfRotation(PointF centerOfRotation) {
+        mCenterOfRotation = centerOfRotation;
+    }
 }
